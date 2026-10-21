@@ -54,7 +54,7 @@
 - 공공 영양 근거를 사용한 사과·달걀·밥의 기본 중량 자동 적용, 작음·보통·큼 선택과 실제 g 수정 흐름 구현
 - 함께 먹기의 카테고리 필터와 공통 점수·카테고리·이름 정렬 구현
 - 섭생표의 모호한 `전체 데이터` 문구를 `섭생표 안내`로 변경하고 불필요한 `기록 검색` 열 제거
-- Firebase 이메일·Google 인증 코드와 로그인 없는 로컬 모드 구현
+- Firebase Google 인증과 로그인 없는 로컬 모드 구현, 동작하지 않는 이메일·비밀번호 로그인 UI 제거
 - 전용 Firebase 프로젝트 `ongyeol-99a2d`와 웹 앱 `ongyeol-web` 생성, Google 로그인 제공자 활성화 및 `.env.local` 연결
 - 로컬 모드 상단에서 Firebase 로그인 화면으로 돌아가는 버튼 구현
 - Firebase 설정을 GitHub Actions secrets로 주입하고 타입 검사·테스트·Vite 빌드 후 GitHub Pages에 배포하는 워크플로 구성
@@ -161,4 +161,5 @@
 | 2026-10-21 | Firebase 승인 도메인 등록과 GitHub 공개 저장소 `Kojeeyeon-coder/ongyeol` 생성 완료 |
 | 2026-10-21 | 첫 GitHub 푸시, Actions secrets·Pages 설정 완료 및 첫 Actions TypeScript 오류 3종 수정 |
 | 2026-10-21 | 커밋 `75eb780`의 Actions 실행 성공 및 `https://kojeeyeon-coder.github.io/ongyeol/` 공개 배포 확인 |
+| 2026-10-21 | 로그인 화면을 Google 로그인과 로그인 없는 로컬 모드만 남기도록 단순화 |
 
