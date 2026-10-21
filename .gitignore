@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.openai/
+.deploy-git-meta/
+.env
+.env.*
+!.env.example
+*.local
+coverage/
+firebase-debug.log
+src/data/nutrition-cache.tmp.json

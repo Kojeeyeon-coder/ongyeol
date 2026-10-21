@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5efe4" />
+    <title>온결 · 실행 미리보기</title>
+    <link rel="stylesheet" href="../src/styles.css" />
+    <style>
+      .preview-banner{padding:8px 16px;background:#463f32;color:#fff;text-align:center;font-size:12px}.preview-banner b{color:#f4d9a8}.preview-only{max-width:900px}.meal-preview{width:86px;height:86px;object-fit:cover;border-radius:14px}.record-list{display:grid;gap:10px}.record-row{display:flex;gap:14px;align-items:center}.record-row>div{flex:1}.record-row p{margin:4px 0;color:var(--muted);font-size:13px}.inline-checks{display:flex;flex-wrap:wrap;gap:8px}.inline-checks label{display:flex;align-items:center;gap:6px;padding:8px 10px;border:1px solid var(--line);border-radius:12px;background:#fff}.inline-checks input{width:auto}.tab-page{display:none}.tab-page.active{display:block}.profile-add{border:1px solid var(--line);background:#fff;border-radius:50%;width:42px;height:42px;font-size:22px}.profile-add:disabled{opacity:.38;cursor:not-allowed}.delete-meal{border:0;border-radius:8px;padding:4px 8px;background:#fae8e3;color:#8b4333;font-size:11px}
+    </style>
+  </head>
+  <body>
+    <div class="preview-banner"><b>실행 미리보기</b> · React 패키지 설치 전에도 핵심 화면을 확인할 수 있는 로컬 버전입니다.</div>
+    <div id="app"></div>
+    <script src="./pulmotonia-data.js"></script>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

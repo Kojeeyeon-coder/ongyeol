@@ -1,0 +1,9 @@
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import App from './App'
+import { AuthGate } from './auth/AuthGate'
+import './styles.css'
+
+createRoot(document.getElementById('root')!).render(
+  <StrictMode><AuthGate>{(user, signOutUser, requestLogin) => <App authUser={user} onSignOut={signOutUser} onRequestLogin={requestLogin} />}</AuthGate></StrictMode>,
+)
