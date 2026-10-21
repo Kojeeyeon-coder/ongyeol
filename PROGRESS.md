@@ -130,7 +130,7 @@
 - Firebase 로그인은 프로젝트 구성값과 Console의 이메일·Google 제공자·허용 도메인 설정 전에는 활성화되지 않는다.
 - Firebase 전용 프로젝트·웹 앱·Google 제공자, 로컬 설정과 `localhost`·GitHub Pages 승인 도메인은 연결됐으며 React 빌드 실동작 검증이 남아 있다.
 - GitHub 공개 저장소 `Kojeeyeon-coder/ongyeol`의 첫 푸시, Actions secrets 6개와 Pages 설정은 완료됐으며 실제 배포와 로그인 실동작 검증은 대기 중이다.
-- 첫 Actions 실행에서 Vite 환경변수 타입 선언, nullable Firebase Auth, `체질 모름` 인덱싱 오류가 확인되어 수정했다. 수정본은 재푸시 후 Actions 검증이 필요하다.
+- 첫 Actions 실행에서 Vite 환경변수 타입 선언, nullable Firebase Auth, `체질 모름` 인덱싱 오류가 확인됐다. 두 번째 실행에서 남은 섭생표 링크의 클로저 타입 좁히기 오류까지 추가 수정했으며 재푸시 후 Actions 검증이 필요하다.
 - 사진 저장 용량 제한과 압축 정책은 구현 전에 확정해야 한다.
 - 브라우저별 IndexedDB 용량·삭제 정책과 시크릿 모드 동작을 검증해야 한다.
 - 실제 사용자가 식사 직후 입력 흐름을 부담 없이 완료하는지 사용성 검증이 필요하다.
