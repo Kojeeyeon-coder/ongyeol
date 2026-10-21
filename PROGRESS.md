@@ -8,7 +8,7 @@
 
 - 전체 단계: 기반·핵심 흐름 구현
 - 현재 진행률: React·TypeScript 골격과 8개 체질 전체 섭생표 수직 기능 구현, 네 탭의 의존성 없는 정적 MVP 미리보기까지 완료
-- 코드 상태: `dist/index.html` 직접 실행 가능, Firebase 전용 프로젝트·GitHub 원격 저장소·Actions secrets·Pages 설정 완료, 첫 Actions 타입 오류 수정 후 재배포 대기
+- 코드 상태: Firebase 전용 프로젝트·GitHub Actions·Pages 배포 완료, 공개 URL에서 Firebase 로그인 화면 로드 확인
 
 ## 완료한 작업
 
@@ -71,15 +71,15 @@
 
 - npm 의존성 설치와 프로덕션 빌드 검증
 - Firebase 연결 React 빌드에서 Google 로그인 실동작 검증
-- GitHub 공개 저장소 첫 푸시와 Actions secrets 6개 등록, Pages의 GitHub Actions 소스 설정 완료; 타입 오류 수정본 재푸시 및 배포 검증
+- GitHub 공개 저장소 첫 푸시, Actions secrets 6개 등록, Pages 배포와 공개 URL 로드 확인 완료
 - 영양 API 실데이터 동기화와 섭생표 음식 코드 매핑
 - 전체 섭생표 데이터 사용 허가 확인
 - Sites 소스 업로드와 비공개 배포 재시도
 
 ## 다음 작업
 
-1. TypeScript 오류 수정 커밋을 `main`에 푸시하고 GitHub Actions의 타입 검사·테스트·빌드 결과 확인
-2. Pages 실제 URL과 Google 로그인 실동작 검증
+1. 배포된 Pages에서 Google 로그인 팝업과 실제 인증 성공 여부 검증
+2. 식사 입력·저장·새로고침 유지 등 핵심 사용자 흐름 검증
 3. 네트워크 가능한 로컬 환경에서 `npm install`, 타입 검사, 테스트와 React 프로덕션 빌드 재검증
 4. 노출된 공공데이터포털 키를 재발급하고 `.env.local`에만 설정
 5. 동기화 스크립트로 실데이터 캐시를 생성하고 식품코드 매핑 검수
@@ -130,7 +130,7 @@
 - Firebase 로그인은 프로젝트 구성값과 Console의 이메일·Google 제공자·허용 도메인 설정 전에는 활성화되지 않는다.
 - Firebase 전용 프로젝트·웹 앱·Google 제공자, 로컬 설정과 `localhost`·GitHub Pages 승인 도메인은 연결됐으며 React 빌드 실동작 검증이 남아 있다.
 - GitHub 공개 저장소 `Kojeeyeon-coder/ongyeol`의 첫 푸시, Actions secrets 6개와 Pages 설정은 완료됐으며 실제 배포와 로그인 실동작 검증은 대기 중이다.
-- 첫 Actions 실행에서 Vite 환경변수 타입 선언, nullable Firebase Auth, `체질 모름` 인덱싱 오류가 확인됐다. 두 번째 실행에서 남은 섭생표 링크의 클로저 타입 좁히기 오류까지 추가 수정했으며 재푸시 후 Actions 검증이 필요하다.
+- 첫 두 Actions 실행에서 발견된 Vite 환경변수 타입, nullable Firebase Auth, `체질 모름` 인덱싱 오류를 수정했고 세 번째 실행에서 타입 검사·테스트·빌드·Pages 배포가 모두 성공했다.
 - 사진 저장 용량 제한과 압축 정책은 구현 전에 확정해야 한다.
 - 브라우저별 IndexedDB 용량·삭제 정책과 시크릿 모드 동작을 검증해야 한다.
 - 실제 사용자가 식사 직후 입력 흐름을 부담 없이 완료하는지 사용성 검증이 필요하다.
@@ -160,4 +160,5 @@
 | 2026-10-21 | Firebase 전용 프로젝트·웹 앱 생성, Google 제공자 활성화와 로컬 환경변수 연결 완료 |
 | 2026-10-21 | Firebase 승인 도메인 등록과 GitHub 공개 저장소 `Kojeeyeon-coder/ongyeol` 생성 완료 |
 | 2026-10-21 | 첫 GitHub 푸시, Actions secrets·Pages 설정 완료 및 첫 Actions TypeScript 오류 3종 수정 |
+| 2026-10-21 | 커밋 `75eb780`의 Actions 실행 성공 및 `https://kojeeyeon-coder.github.io/ongyeol/` 공개 배포 확인 |
 
