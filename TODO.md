@@ -24,7 +24,7 @@
   - 완료 조건: Sites 소스 반영과 배포가 성공하고 실제 URL에서 주요 화면을 확인함
 - [~] GitHub Pages 자동 배포 구성
   - 완료 조건: Firebase 환경값을 GitHub Actions secrets로 주입하고 `main` 푸시 시 검사·빌드·배포가 성공해 실제 URL을 확인함
-  - 현재 상태: 공개 저장소 `Kojeeyeon-coder/ongyeol` 생성 완료; 첫 푸시, Actions secrets와 Pages 실배포 대기
+  - 현재 상태: 공개 저장소 첫 푸시, Actions secrets 6개 등록과 Pages의 GitHub Actions 소스 설정 완료; 첫 실행에서 발견된 TypeScript 오류 수정 후 재배포 대기
 - [x] 디자인 토큰과 반응형 레이아웃 기반 구성
   - 완료 조건: 베이지·화이트 색상, 타이포그래피, 간격, 반경, 상태 색상과 주요 브레이크포인트가 공통 토큰으로 정의됨
 - [x] 앱 내비게이션 구성

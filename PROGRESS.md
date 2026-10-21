@@ -8,7 +8,7 @@
 
 - 전체 단계: 기반·핵심 흐름 구현
 - 현재 진행률: React·TypeScript 골격과 8개 체질 전체 섭생표 수직 기능 구현, 네 탭의 의존성 없는 정적 MVP 미리보기까지 완료
-- 코드 상태: `dist/index.html` 직접 실행 가능, Firebase 전용 프로젝트와 로컬 설정 연결 완료, React 빌드 검증·GitHub 원격 저장소 연결 대기
+- 코드 상태: `dist/index.html` 직접 실행 가능, Firebase 전용 프로젝트·GitHub 원격 저장소·Actions secrets·Pages 설정 완료, 첫 Actions 타입 오류 수정 후 재배포 대기
 
 ## 완료한 작업
 
@@ -71,16 +71,16 @@
 
 - npm 의존성 설치와 프로덕션 빌드 검증
 - Firebase 연결 React 빌드에서 Google 로그인 실동작 검증
-- GitHub 공개 저장소와 첫 커밋 생성, 네트워크 가능한 로컬 터미널의 첫 푸시와 Actions secrets 등록 및 Pages 배포
+- GitHub 공개 저장소 첫 푸시와 Actions secrets 6개 등록, Pages의 GitHub Actions 소스 설정 완료; 타입 오류 수정본 재푸시 및 배포 검증
 - 영양 API 실데이터 동기화와 섭생표 음식 코드 매핑
 - 전체 섭생표 데이터 사용 허가 확인
 - Sites 소스 업로드와 비공개 배포 재시도
 
 ## 다음 작업
 
-1. Firebase Web 앱 설정값 여섯 개를 GitHub Actions secrets로 등록하고 허용 도메인을 설정
-2. GitHub 원격 저장소를 연결하고 첫 커밋을 `main`에 푸시한 뒤 Pages 실제 URL 검증
-3. `npm install`, 타입 검사, 테스트와 React 프로덕션 빌드의 로컬 재검증
+1. TypeScript 오류 수정 커밋을 `main`에 푸시하고 GitHub Actions의 타입 검사·테스트·빌드 결과 확인
+2. Pages 실제 URL과 Google 로그인 실동작 검증
+3. 네트워크 가능한 로컬 환경에서 `npm install`, 타입 검사, 테스트와 React 프로덕션 빌드 재검증
 4. 노출된 공공데이터포털 키를 재발급하고 `.env.local`에만 설정
 5. 동기화 스크립트로 실데이터 캐시를 생성하고 식품코드 매핑 검수
 6. 식사 기록 수정 구현
@@ -129,8 +129,8 @@
 - 2026-10-20 현재 실행 환경의 외부 `fetch`가 차단되어 API 최초 요청이 실패했으며, 네트워크 가능한 로컬 터미널에서 동기화를 다시 실행해야 한다.
 - Firebase 로그인은 프로젝트 구성값과 Console의 이메일·Google 제공자·허용 도메인 설정 전에는 활성화되지 않는다.
 - Firebase 전용 프로젝트·웹 앱·Google 제공자, 로컬 설정과 `localhost`·GitHub Pages 승인 도메인은 연결됐으며 React 빌드 실동작 검증이 남아 있다.
-- GitHub 공개 저장소 `Kojeeyeon-coder/ongyeol`은 생성됐으며 첫 푸시·Actions secrets·Pages 실제 배포와 로그인 실동작 검증은 대기 중이다.
-- 배포용 첫 커밋 `9fcb034`을 별도 임시 Git 메타데이터에 생성했으나 현재 실행 환경에서 `github.com` DNS 해석이 차단되어 푸시는 로컬 터미널 실행이 필요하다.
+- GitHub 공개 저장소 `Kojeeyeon-coder/ongyeol`의 첫 푸시, Actions secrets 6개와 Pages 설정은 완료됐으며 실제 배포와 로그인 실동작 검증은 대기 중이다.
+- 첫 Actions 실행에서 Vite 환경변수 타입 선언, nullable Firebase Auth, `체질 모름` 인덱싱 오류가 확인되어 수정했다. 수정본은 재푸시 후 Actions 검증이 필요하다.
 - 사진 저장 용량 제한과 압축 정책은 구현 전에 확정해야 한다.
 - 브라우저별 IndexedDB 용량·삭제 정책과 시크릿 모드 동작을 검증해야 한다.
 - 실제 사용자가 식사 직후 입력 흐름을 부담 없이 완료하는지 사용성 검증이 필요하다.
@@ -159,4 +159,5 @@
 | 2026-10-20 | GitHub Pages Actions 배포 워크플로, Firebase secrets 검증과 로컬 모드 로그인 재진입 버튼 추가 |
 | 2026-10-21 | Firebase 전용 프로젝트·웹 앱 생성, Google 제공자 활성화와 로컬 환경변수 연결 완료 |
 | 2026-10-21 | Firebase 승인 도메인 등록과 GitHub 공개 저장소 `Kojeeyeon-coder/ongyeol` 생성 완료 |
+| 2026-10-21 | 첫 GitHub 푸시, Actions secrets·Pages 설정 완료 및 첫 Actions TypeScript 오류 3종 수정 |
 
